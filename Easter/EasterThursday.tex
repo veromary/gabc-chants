@@ -1,0 +1,161 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% page 782 in liber (968 in pdf)
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+\documentclass[a4paper,12pt]{article} % use larger type; default would be 10pt
+\usepackage{../definepsalms}
+
+\newcommand{\setsecondannotation}[1]{}
+
+\newcommand{\heading}{Easter Thursday at Vespers}
+\sloppy
+
+\newcommand{\predeusinadjutorium}{%
+%\smallskip
+\large
+\grechangestaffsize{15}
+}
+\def\deusinadjutoriumsolemn{T}
+\def\includelaustibi{F}
+
+\newcommand{\preantone}{\grechangestaffsize{17}
+\large
+%\greblockcustos
+}
+
+\newcommand{\antoneinitialsize}{40}
+\newcommand{\antonetex}{Ant1-AngelusAutemDomini}
+\newcommand{\antoneinitial}{A}
+\newcommand{\antonetranslation}{For an angel of the Lord descended from heaven; and coming, rolled back the stone, and sat upon it, alleluia, alleluia.}
+\definepsalm{1}{109}{8}{G}
+\newcommand{\prepsalmone}{%
+%\vspace{-1.5ex}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preanttwo}{\grechangestaffsize{17}
+%\greblockcustos
+\large
+}
+\newcommand{\anttwoinitialsize}{40}
+\newcommand{\anttwotex}{Ant2-EtEcceTerraemotus}
+\newcommand{\anttwoinitial}{E}
+\newcommand{\anttwotranslation}{And behold there was a great earthquake; for an angel of the Lord descended from heaven, alleluia.}
+\definepsalm{2}{110}{7}{c}
+\newcommand{\prepsalmtwo}{%
+\normalsize
+%\greblockcustos
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantthree}{\grechangestaffsize{17}
+\large
+%\greblockcustos
+}
+\newcommand{\antthreeinitialsize}{40}
+\newcommand{\antthreetex}{Ant3-EratAutem}
+\newcommand{\antthreeinitial}{E}
+\newcommand{\antthreetranslation}{And his countenance was as lightning, and his raiment as snow, alleluia, alleluia.}
+\def\psalmclef{2}
+\definepsalm{3}{111}{8}{c}
+\let\psalmclef=\undefined
+\newcommand{\prepsalmthree}{%
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\preantfour}{\grechangestaffsize{17}
+%\greblockcustos
+\large
+%\normalsize
+}
+\newcommand{\antfourinitialsize}{40}
+\newcommand{\antfourtex}{Ant4-PraeTimoreAutemEjus}
+\newcommand{\antfourinitial}{P}
+\newcommand{\antfourtranslation}{And for fear of him the guards were struck with terror, and became as dead men, alleluia.}
+\definepsalm{4}{112}{7}{a}
+\newcommand{\prepsalmfour}{%
+%\vspace{-1ex}
+%\grechangestaffsize{15}
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\nopagebreakbeforepsalmfive{T}
+%\def\pagebreakafterpsalmfive{T}
+\newcommand{\preantfive}{\grechangestaffsize{17}
+%\greblockcustos
+%\normalsize
+\large
+}
+\newcommand{\preantfivetwo}{\preantfive}
+\newcommand{\antfivefontsizetwo}{40}
+
+\newcommand{\antfiveinitialsize}{40}
+\newcommand{\antfivetex}{Ant5-RespondensAutemAngelus}
+\newcommand{\antfiveinitial}{R}
+%\newcommand{\psalmfivetranslationsmall}{T}
+\newcommand{\antfivetranslation}{And the angel answering, said to the women, Fear not you, for I know that you seek Jesus, alleluia.}
+\def\psalmclef{2}
+\definepsalm{5}{113}{8}{G}
+\let\psalmclef=\undefined
+\newcommand{\prepsalmfiveverses}{\vspace{-0.3pc}}
+\newcommand{\prepsalmfive}{%
+%\vspace{-1ex}
+%\grechangestaffsize{15}%
+\normalsize%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\prechapterhymnversicleantiphon}{\large}
+\newcommand{\chapterhymnversicleantiphontex}{Ant-HaecDies}
+\newcommand{\chapterhymnversicleantiphoninitial}{H}
+\newcommand{\chapterhymnversicleantiphonmode}{2}
+\newcommand{\prechapterhymnversicleantiphontranslation}{\normalsize}
+\newcommand{\chapterhymnversicleantiphontranslation}{This is the day which the Lord hath made: let us be glad and rejoice therein.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\premag}{
+\large
+\grechangestaffsize{17}
+%\greblockcustos
+}
+%\newcommand{\premagtwo}{
+%\grechangestaffsize{16}
+%}
+\def\pagebreakbeforemagnificat{T}
+\newcommand{\magfontsize}{40}
+\newcommand{\magantinitial}{E}
+\newcommand{\maganttranslation}{They have taken away my Lord, * and I know not where they have laid Him: if thou have borne Him hence, tell me, alleluia, and I will take Him away, alleluia.}
+\newcommand{\maganttex}{an--tulerunt_dominum--solesmes_1961}
+\def\magsolemn{T}
+\def\magoneline{T}
+\def\psalmclef{c3}
+\definemag{7}{b}
+\let\psalmclef=\undefined
+%\newcommand{\magtone}{8}
+%\newcommand{\magend}{G}
+\newcommand{\premagverses}{\grechangestaffsize{15}
+\normalsize
+%\pagebreak
+}
+
+\newcommand{\collect}{\lettrine{D}{eus,} qui diversitátem géntium in confessióne tui nóminis adunásti: da, ut renátis fonte baptísmatis una sit fides méntium et píetas actiónum. Per Dóminum nostrum Iesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.}
+\newcommand{\collecttranslation}{\lettrine{O}{ God,} Who dost make all nations, how diverse soever they be, to become one family in giving of praise to thy Name, grant unto all them that are born again in the fountain of baptism to live ever in oneness of faith, and godliness of works.
+Through Jesus Christ, thy Son our Lord, Who liveth and reigneth with thee, in the unity of the Holy Ghost, God, world without end.}
+
+\definebenedicamusdomino{easterday}{}
+
+\def\includefideliumanimae{T}
+
+\input{../inc_header}
+\input{../myFullVespers-test}

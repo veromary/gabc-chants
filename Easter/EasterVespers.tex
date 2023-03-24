@@ -5,8 +5,10 @@
 
 % This is a simple template for a LuaLaTeX document using gregorio scores.
 
-\documentclass[letterpaper,12pt]{article} % use larger type; default would be 10pt
+\documentclass[a4paper,12pt]{article} % use larger type; default would be 10pt
 \usepackage{../definepsalms}
+
+\newcommand{\setsecondannotation}[1]{}
 
 \newcommand{\heading}{Easter Sunday at Vespers}
 \sloppy
@@ -14,12 +16,12 @@
 \newcommand{\predeusinadjutorium}{%
 %\smallskip
 \large
-\setgrefactor{15}
+\grechangestaffsize{15}
 }
 \def\deusinadjutoriumsolemn{T}
 \def\includelaustibi{F}
 
-\newcommand{\preantone}{\setgrefactor{17}
+\newcommand{\preantone}{\grechangestaffsize{17}
 \large
 %\greblockcustos
 }
@@ -35,7 +37,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preanttwo}{\setgrefactor{17}
+\newcommand{\preanttwo}{\grechangestaffsize{17}
 %\greblockcustos
 \large
 }
@@ -46,12 +48,12 @@
 \definepsalm{2}{110}{7}{c}
 \newcommand{\prepsalmtwo}{%
 \normalsize
-\greblockcustos
+%\greblockcustos
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preantthree}{\setgrefactor{17}
+\newcommand{\preantthree}{\grechangestaffsize{17}
 \large
 %\greblockcustos
 }
@@ -68,7 +70,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\preantfour}{\setgrefactor{17}
+\newcommand{\preantfour}{\grechangestaffsize{17}
 %\greblockcustos
 \large
 %\normalsize
@@ -80,7 +82,7 @@
 \definepsalm{4}{112}{7}{a}
 \newcommand{\prepsalmfour}{%
 %\vspace{-1ex}
-%\setgrefactor{15}
+%\grechangestaffsize{15}
 \normalsize
 }
 
@@ -88,7 +90,7 @@
 
 %\def\nopagebreakbeforepsalmfive{T}
 %\def\pagebreakafterpsalmfive{T}
-\newcommand{\preantfive}{\setgrefactor{17}
+\newcommand{\preantfive}{\grechangestaffsize{17}
 %\greblockcustos
 %\normalsize
 \large
@@ -107,7 +109,7 @@
 \newcommand{\prepsalmfiveverses}{\vspace{-0.3pc}}
 \newcommand{\prepsalmfive}{%
 %\vspace{-1ex}
-%\setgrefactor{15}%
+%\grechangestaffsize{15}%
 \normalsize%
 }
 
@@ -124,11 +126,11 @@
 
 \newcommand{\premag}{
 \large
-\setgrefactor{17}
+\grechangestaffsize{17}
 %\greblockcustos
 }
 %\newcommand{\premagtwo}{
-%\setgrefactor{16}
+%\grechangestaffsize{16}
 %}
 \def\pagebreakbeforemagnificat{T}
 \newcommand{\magfontsize}{40}
@@ -142,17 +144,17 @@
 \let\psalmclef=\undefined
 %\newcommand{\magtone}{8}
 %\newcommand{\magend}{G}
-\newcommand{\premagverses}{\setgrefactor{15}
+\newcommand{\premagverses}{\grechangestaffsize{15}
 \normalsize
 %\pagebreak
 }
 
-\newcommand{\collect}{Deus, qui hodiérna die per Unigénitum tuum, æternitátis nobis áditum devícta morte reserásti~:~\dag{} vota nostra, quæ præveniéndo aspíras,~* étiam adjuvándo proséquere. Per eúmdem Dóminum.}
-\newcommand{\collecttranslation}{O God, who, on this day, through Thine only-begotten Son, hast conquered death, and thrown open to us the gate of everlasting life, give effect by Thine aid to our desires, which Thou dost anticipate and inspire. Through the same our Lord.}
+\newcommand{\collect}{\lettrine{D}{eus,} qui hodiérna die per Unigénitum tuum, æternitátis nobis áditum devícta morte reserásti~:~\dag{} vota nostra, quæ præveniéndo aspíras,~* étiam adjuvándo proséquere. Per eúmdem Dóminum.}
+\newcommand{\collecttranslation}{\lettrine{O}{ God,} who, on this day, through Thine only-begotten Son, hast conquered death, and thrown open to us the gate of everlasting life, give effect by Thine aid to our desires, which Thou dost anticipate and inspire. Through the same our Lord.}
 
 \definebenedicamusdomino{easterday}{}
 
 \def\includefideliumanimae{T}
 
 \input{../inc_header}
-\input{../FullVespers-test}
+\input{../myFullVespers-test}

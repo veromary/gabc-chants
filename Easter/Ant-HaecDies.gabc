@@ -1,46 +1,7 @@
-% !TEX TS-program = gregorio
-% !TEX encoding = UTF-8
-
-% The first part of the score is called the header, you can input some useful informations here:
-
-name: Hæc díes;
-office-part: Antiphon;
-mode: 2;
-occasion: Easter;
-date: 2011;
-transcriber: Albert Bloomfield;
-transcription-date: 2011;
-style: modern;
-annotation: Ant.;
-annotation: 2.;
-
-% Then, when gregorio encounters the following line (%%), it switches to the score, where you input the notes
-
+name:Haec dies;
+office-part:Antiphona;
+mode:2;
+book:The Liber Usualis, 1961, p. 783 & Liber antiphonarius, 1960, p. 445;
+transcriber:Andrew Hinkley;
 %%
-
-% The syntax in this part is called gabc. Please refer to http://home.gna.org/gregorio/gabc/#basis
-
-HÆC(c3gxf_e/gvFEfd/f_h) dí(hhhvFEfef//)es,(f.) <v>\greheightstar</v>(;) quam(ef) fé(hh)cit(hh ijh/hvF'Ef.) (,) Dó(hfh)mi(hhh)nus :(%h.f!gwh!iv.hi/jhh/iih.
-[ev:\greglyph{\char 6146}{h}{g}{1}{}{%
-\raisebox{1pt}{\grepunctummora{h}{2}{0}{0}}%
-}%
-\greendofglyph{1}%
-\greglyph{\char 2561}{g}{i}{4}{}{}%
-\greendofglyph{1}%
-\greglyph{\char 23}{i}{h}{0}{}{%
-\grepunctummora{i}{0}{0}{0}%
-}%
-\greendofglyph{0}%
-\greglyph{\char 1025}{h}{j}{0}{}{}%
-\greendofelement{0}{0}%
-\greglyph{\char 6146}{j}{h}{1}{}{}%
-\greendofglyph{0}%
-\greglyph{\char 17}{h}{i}{0}{}{}%
-\greendofelement{0}{0}%
-\greglyph{\char 17}{i}{i}{0}{}{}%
-\greendofglyph{0}%
-\greglyph{\char 5121}{i}{f}{8}{}{%
-\grepunctummora{h}{0}{0}{0}%
-}%
-]) (:)
-ex(f)sul(h)té(hg/hi!jvHGhhg,i_hivHF)mus,(fhF'Efhhf hvvGF'heed.) (:) et(d!e'f) læ(fef)té(hf/hhh)mur(hiHF.) (;) in(ef) é(hf/h_i)a.(ih/ij/I'H,jh/jk/IG'hvF'E f!gwh!iv.h!i'j,ijijHF'gwhf.) (::)
+(c3) HAec(gxf_egvFEfd/f_h) di(hhhvFEfef)es,(f.) *(;) quam(ef) fe(hh)cit(hh//ijhhvF'Ef.) (,) Dó(hfh)mi(hhh)nus :(h.f!gwh!iv.hi/jhh/iih.0) (:) ex(f)sul(h)té(hg/hi!jvHGhhg)(,)(i_[oh:h]hivHF)mus,(fhF'Efhhf//hvvGF'heed.0) (:) et(de'f) lae(fef)té(hf/hhh)mur(hiHF.1) (;) in(ef) e(hf/h_i)a.(ih/ijI'H) (,) (jh/jkIG'hvF'E//f!gwh!iv.hi'j) (,) (ijijHF'gwhf.1) (::)

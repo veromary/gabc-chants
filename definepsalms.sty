@@ -65,9 +65,10 @@ five%
     \fi%
     %\vspace{0pt plus 4pt minus 12pt}%
     \predeusinadjutorium%
-    \def\annot{\small \Vbar{}}
-    \setinitialspacing{D}
-    \includescore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
+%    \def\annot{\small \Vbar{}}
+    %\setinitialspacing{D}
+    \gresetinitiallines{1} % VB
+    \gregorioscore{../DeusInAdjutorium\if\deusinadjutoriumsolemn T%
     _solemn\fi\if\includelaustibi T%
     _laustibi\fi%
     }
@@ -79,7 +80,7 @@ five%
 %            {\itshape From Septuagesima to Wednesday in Holy Week, the following is said instead of} Allelúia :
 %            \smallskip
 %
-%            \includescore{../LausTibiDomine\if\deusinadjutoriumsolemn T%
+%            \gregorioscore{../LausTibiDomine\if\deusinadjutoriumsolemn T%
 %            _solemn\fi}
 %        \fi%
 %    \fi
@@ -237,8 +238,8 @@ five%
     \def\annot{\small{#2}}
     \def\annottwo{\small{#3}}
     \setinitialspacing{#4}
-
-    \includescore{#5}}
+	\gresetinitiallines{1} % VB
+    \gregorioscore{#5}}
 }
 
 \def\prepsalmverses{\medskip}
@@ -347,12 +348,11 @@ five%
 % TODO: figure out how to do this without letting it run greblockcustos
 {
 \ifx\prepsalm\undefined\else
-\def\greblockcustos{%
-% the regular greblockcustos is global which messes us up here, so redefine it without the \global
-  \greblockcusto=1\relax %
-  \grelocalrightbox{}%
-  \relax %
-}
+\newcommand{\greblockcustos}{}% the regular greblockcustos is global which messes us up here, so redefine it without the \global
+%  \greblockcusto=1\relax %
+%  \grelocalrightbox{}%
+%  \relax %
+%}
 \prepsalm
 \fi
 }
@@ -652,7 +652,8 @@ five%
 \fi
 {
 {\ifx\prepsalm\undefined\else\prepsalm\fi
-  \includescore{\psalmtex}
+\gresetinitiallines{0} % VB
+  \gregorioscore{\psalmtex}
 }
 %\medskip % do we need this?
 {\ifx\prepsalmverses\undefined\medskip\else\prepsalmverses\fi
@@ -793,7 +794,7 @@ five%
 %3 vtranslation
 %4 rtranslation
 % vrnospace optional
-    {#1\includescore{#2}}\vspace{-4pt plus 4pt}
+    {#1\gregorioscore{#2}}\vspace{-4pt plus 4pt}
     \translation[\normalsize]{
     \Vbar{}~#3{}%
     \ifx\vrnospace\undefined
@@ -858,8 +859,9 @@ five%
     }
     \def\annottwo{\small{\antlinetwo}}
     \setinitialspacing{\antinitial}
+    \gresetinitiallines{1} % VB
     \ifx\anttex\undefined\def\anttex{MagnificatAntiphon}\fi
-    \includescore{\anttex}
+    \gregorioscore{\anttex}
 }
 
     \begin{center}{\large #1.}\end{center}
@@ -887,7 +889,8 @@ five%
       \bigskip
     \fi
     {\preverses
-    \ifx\magoneline\undefined\else\if\magoneline T\greblockcustos\fi\fi
+    \ifx\magoneline\undefined\else\if\magoneline T%\greblockcustos
+    \fi\fi
     \begin{magnificat}[\versenum]{\magtex}
     %\vspace{-1ex}
     \magverses

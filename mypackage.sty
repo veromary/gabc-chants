@@ -10,7 +10,7 @@
 \DeclareOption{garamond}{
 \setboolean{libertine}{false}
 }
-\ExecuteOptions{garamond}
+\ExecuteOptions{libertine}
 \ProcessOptions\relax
 
 %\usepackage{fullpage} % to reduce the margins
@@ -36,20 +36,20 @@
 \usepackage[utf8]{luainputenc}
 \usepackage{libertine}
 \renewcommand*\oldstylenums[1]{{\fontfamily{fxlj}\selectfont #1}}
-\newcommand*\addfontfeature[1]{}
+\renewcommand*\addfontfeature[1]{}
 }{
 \usepackage{fontspec}
 \renewcommand*\oldstylenums[1]{#1}
-\AtBeginDocument{\fontspec[Ligatures=TeX,Numbers=OldStyle]{Garamond Premier Pro}}
-\newcommand\garamond[1]{\fontspec[Ligatures=TeX,Numbers=OldStyle]{Garamond Premier Pro}#1}
-\let\oldchead\chead
-\renewcommand\chead[1]{\oldchead{\garamond{#1}}}
-\let\oldcfoot\cfoot
-\let\oldlfoot\lfoot
-\let\oldrfoot\rfoot
-\renewcommand\cfoot[1]{\oldcfoot{\garamond{#1}}}
-\renewcommand\lfoot[2][]{\oldlfoot[\garamond{#1}]{\garamond{#2}}}
-\renewcommand\rfoot[2][]{\oldrfoot[\garamond{#1}]{\garamond{#2}}}
+\AtBeginDocument{\fontspec[Ligatures=TeX,Numbers=OldStyle]{EB Garamond}}
+\newcommand\garamond[1]{\fontspec[Ligatures=TeX,Numbers=OldStyle]{EB Garamond}#1}
+%\let\oldchead\chead
+%\renewcommand\chead[1]{\oldchead{\garamond{#1}}}
+%\let\oldcfoot\cfoot
+%\let\oldlfoot\lfoot
+%\let\oldrfoot\rfoot
+%\renewcommand\cfoot[1]{\oldcfoot{\garamond{#1}}}
+%\renewcommand\lfoot[2][]{\oldlfoot[\garamond{#1}]{\garamond{#2}}}
+%\renewcommand\rfoot[2][]{\oldrfoot[\garamond{#1}]{\garamond{#2}}}
 }
 
 \newcommand{\versiculum}[1]{{\fontspec{versiculum}#1}}
@@ -143,10 +143,9 @@
 % 1 - latin
 % 2 - english
 % requires columns environment
-\noindent%\selectlanguage{latin}
-\dropcap{latin}{#1} &% \selectlanguage{american}
-\dropcap{american}{#2} \selectlanguage{latin}
-}
+\colchunk{\selectlanguage{latin}
+#1} \colchunk{\selectlanguage{american}
+#2} }
 
 \newcommand{\prayer}[2]{
 % 1 - latin
@@ -322,7 +321,8 @@
 \newenvironment{magnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
-\includescore{#2}
+	\gresetinitiallines{0} % VB
+\gregorioscore{#2}
 \normalsize
 \begin{psalmverses}[#1]
 }{\end{psalmverses}}
@@ -330,7 +330,7 @@
 \newenvironment{boldnummagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
-\includescore{#2}
+\gregorioscore{#2}
 \normalsize
 \begin{boldnumpsalmverses}[#1]
 }{\end{boldnumpsalmverses}}
@@ -338,7 +338,7 @@
 \newenvironment{oddversesmagnificat}[2][2]{
 % 1 - number to start on
 % 2 - name of magnificat to include
-\includescore{#2}
+\gregorioscore{#2}
 \normalsize
 \begin{oddnumpsalmverses}[#1]
 }{\end{oddnumpsalmverses}}
@@ -371,9 +371,9 @@
 %
 %text height is: \the\textheight
 %E text height is: \the\Etextheight
-%grefactor is: \the\grefactor
+%grefactor is: \the\greconffactor
 %Annot height is: \the\annotheight
-\setlength{\alsinitialsize}{\grefactor pt * \real{3.7} - 30pt + \annotheight}% \annotheight * \real{1.6}} % + \Etextheight - \annotheight}
+\setlength{\alsinitialsize}{\greconffactor pt * \real{3.7} - 30pt + \annotheight}% \annotheight * \real{1.6}} % + \Etextheight - \annotheight}
 \def\greinitialformat##1{%
 {\fontsize{\alsinitialsize}{\alsinitialsize}\selectfont ##1}%
 }
@@ -386,10 +386,10 @@
 \addtolength{\spacewidth}{-\initwidth}
 \setlength{\spacewidth}{0.5\spacewidth}
 %
-\setspaceafterinitial{\spacewidth}
-\setspacebeforeinitial{\spacewidth}
+%\setspaceafterinitial{\spacewidth}
+%\setspacebeforeinitial{\spacewidth}
 %
-\gresetfirstlineaboveinitial{\annot}{\annot}
+%\gresetfirstlineaboveinitial{\annot}{\annot}
 \ifx\annottwo\undefined\else%
 \setsecondannotation{\annottwo}
 \fi
